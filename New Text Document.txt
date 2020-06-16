@@ -1,0 +1,362 @@
+CREATE TABLE [dbo].[ProductDimension](
+	[ProductID] [int] NOT NULL,
+	[ProductName] [nvarchar](40) NOT NULL,
+	[ProductCode] [nvarchar](10) NOT NULL,
+	[ProductDescription] [nvarchar](200) NOT NULL,
+	[UnitPrice] [decimal](18,2) NOT NULL,
+	[Discontinued] [bit] NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+
+CREATE TABLE [dbo].[StoreDimension](
+	[StoreID] [int] NOT NULL,
+	[StoreName] [nvarchar](200) NOT NULL,
+	[AddressID] [int] NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[AddressDimension](
+	[AddressID] [int] NOT NULL,
+	[AddressLine1] [nvarchar](60) NOT NULL,
+	[AddressLine2] [nvarchar](60) NULL,
+	[City] [nvarchar](50) NOT NULL,
+	[Province] [nvarchar](200) NOT NULL,
+	[Country] [nvarchar](60) NOT NULL,
+	[PostalCode] [nvarchar](15) NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[CustomerDimension](
+	[CustomerID] [int] NOT NULL,
+	[FullName] [nvarchar](150) NOT NULL,
+	[Title] [nvarchar](30) NULL,
+	[DeliveryAddressID] int NOT NULL,
+	[BillingAddressID] int NOT NULL,
+	[PhoneNumber] [nvarchar](24) NOT NULL,
+	[Email] [nvarchar](100) NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+
+CREATE TABLE [dbo].[EmployeeDimension](
+	[EmployeeID] [int] NOT NULL,
+	[FullName] [nvarchar](100) NOT NULL,
+	[Title] [nvarchar](25) NULL,
+	[Birthdate] [datetime] NOT NULL,
+	[Gender] [nchar](10) NOT NULL,
+	[HireDate] [datetime] NOT NULL,
+	[JobTitle] [nvarchar](100) NOT NULL,
+	[AddressID] int NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[PackageTypeDimension](
+	[PackageTypeID] [int] NOT NULL,
+	[PackageTypeName] [nvarchar](50) NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[PaymentTypeDimension](
+	[PaymentTypeID] [int] NOT NULL,
+	[PaymentTypeName] [nvarchar](50) NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[PromotionDimension](
+	[PromotionID] [int] NOT NULL,
+	[DealDescription] [nvarchar](30) NOT NULL,
+	[StartDate] [date] NOT NULL,
+	[EndDate] [date] NOT NULL,
+	[DiscountAmount] [decimal](18,2) NULL,
+	[DiscountPercentage] [decimal](18,3) NULL,
+	[ModifiedDate] [datetime] NOT NULL
+)
+GO
+
+CREATE TABLE [dbo].[SalesFact](
+	[SalesID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[StoreID] [int] NOT NULL,
+	[CustomerID] [int] NOT NULL,
+	[EmployeeID] [int] NOT NULL,
+	[DeliveryAddressID] [int] NOT NULL,
+	[PackageTypeID] [int] NOT NULL,
+	[PaymentTypeID] [int] NOT NULL,
+	[PromotionID] [int] NOT NULL,
+	[UnitPrice] [decimal](18,2) NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[OrderDate] [datetime] NOT NULL,
+	[DeliveryDate] [datetime] NOT NULL,
+	[Discount] [decimal](18,2) NULL
+)
+GO
+
+CREATE TABLE [dbo].[StockFact](
+	[StockID] [int] NOT NULL,
+	[StoreID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[Date] [datetime] NOT NULL,
+	[StartingQuantity] [int] NOT NULL,
+	[RemainingQuantity] [int] NOT NULL,
+)
+GO
+
+ALTER TABLE [dbo].[ProductDimension]
+	ADD CONSTRAINT PK_ProductDimension_ProductID PRIMARY KEY CLUSTERED (ProductID);
+
+ALTER TABLE [dbo].[StoreDimension]
+	ADD CONSTRAINT PK_StoreDimension_StoreID PRIMARY KEY CLUSTERED (StoreID);
+
+ALTER TABLE [dbo].[AddressDimension]
+	ADD CONSTRAINT PK_AddressDimension_AddressID PRIMARY KEY CLUSTERED (AddressID);
+
+ALTER TABLE [dbo].[CustomerDimension]
+	ADD CONSTRAINT PK_CustomerDimension_CustomerID PRIMARY KEY CLUSTERED (CustomerID);
+
+ALTER TABLE [dbo].[EmployeeDimension]
+	ADD CONSTRAINT PK_EmployeeDimension_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID);
+
+ALTER TABLE [dbo].[PackageTypeDimension]
+	ADD CONSTRAINT PK_PackageTypeDimension_PackageTypeID PRIMARY KEY CLUSTERED (PackageTypeID);
+
+ALTER TABLE [dbo].[PaymentTypeDimension]
+	ADD CONSTRAINT PK_PaymentTypeDimension_PaymentTypeID PRIMARY KEY CLUSTERED (PaymentTypeID);
+
+ALTER TABLE [dbo].[PromotionDimension]
+	ADD CONSTRAINT PK_PromotionDimension_PromotionID PRIMARY KEY CLUSTERED (PromotionID);
+
+
+ALTER TABLE [dbo].[SalesFact]
+	ADD CONSTRAINT PK_SalesFact_SalesID PRIMARY KEY CLUSTERED (SalesID);
+
+ALTER TABLE [dbo].[StockFact]
+	ADD CONSTRAINT PK_StockFact_StockID PRIMARY KEY CLUSTERED (StockID);
+
+
+ALTER TABLE [dbo].[StoreDimension] 
+	ADD CONSTRAINT FK_StoreDimension_Address FOREIGN KEY (AddressID) REFERENCES [dbo].[AddressDimension] (AddressID);
+
+ALTER TABLE [dbo].[CustomerDimension] 
+	ADD CONSTRAINT FK_CustomerDimension_DeliveryAddress FOREIGN KEY (DeliveryAddressID) REFERENCES [dbo].[AddressDimension] (AddressID);
+
+ALTER TABLE [dbo].[CustomerDimension] 
+	ADD CONSTRAINT FK_CustomerDimension_BillingAddress FOREIGN KEY (BillingAddressID) REFERENCES [dbo].[AddressDimension] (AddressID);
+
+
+ALTER TABLE [dbo].[EmployeeDimension] 
+	ADD CONSTRAINT FK_EmployeeDimension_Address FOREIGN KEY (AddressID) REFERENCES [dbo].[AddressDimension] (AddressID);
+
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_Product FOREIGN KEY (ProductID) REFERENCES [dbo].[ProductDimension] (ProductID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_Store FOREIGN KEY (StoreID) REFERENCES [dbo].[StoreDimension] (StoreID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_Customer FOREIGN KEY (CustomerID) REFERENCES [dbo].[CustomerDimension] (CustomerID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_Employee FOREIGN KEY (EmployeeID) REFERENCES [dbo].[EmployeeDimension] (EmployeeID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_DeliveryAddress FOREIGN KEY (DeliveryAddressID) REFERENCES [dbo].[AddressDimension] (AddressID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_PaymentType FOREIGN KEY (PaymentTypeID) REFERENCES [dbo].[PaymentTypeDimension] (PaymentTypeID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_PackageType FOREIGN KEY (PackageTypeID) REFERENCES [dbo].[PackageTypeDimension] (PackageTypeID);
+
+ALTER TABLE [dbo].[SalesFact] 
+	ADD CONSTRAINT FK_SalesFact_Promotion FOREIGN KEY (PromotionID) REFERENCES [dbo].[PromotionDimension] (PromotionID);
+
+ALTER TABLE [dbo].[StockFact] 
+	ADD CONSTRAINT FK_StockFact_Store FOREIGN KEY (StoreID) REFERENCES [dbo].[StoreDimension] (StoreID);
+
+ALTER TABLE [dbo].[StockFact] 
+	ADD CONSTRAINT FK_StockFact_Product FOREIGN KEY (ProductID) REFERENCES [dbo].[ProductDimension] (ProductID);
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[AddressDimension]
+	([AddressID]
+	,[AddressLine1]
+	,[AddressLine2]
+	,[City]
+	,[Province]
+	,[Country],
+	,[PostalCode]
+	,[ModifiedDate])
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[AddressDimension]
+	([AddressID]
+	,[AddressLine1]
+	,[AddressLine2]
+	,[City]
+	,[Province]
+	,[Country]
+	,[PostalCode]
+	,[ModifiedDate])
+
+SELECT A.AddressID
+      ,A.AddressLine1
+      ,A.AddressLine2
+      ,CI.CityName AS [City]
+      ,P.[ProvinceName] AS [Province]
+      ,CO.[CountryName] AS [Country]
+      ,A.[PostalCode]
+      ,A.[ModifiedDate]
+FROM [CourseWorkDatabase].[dbo].[Addresses] AS A
+INNER JOIN [CourseWorkDatabase].[dbo].[Cities] AS CI ON CI.[CityID]=A.[CityID]
+INNER JOIN [CourseWorkDatabase].[dbo].[Provinces] AS P ON P.[ProvinceID]=CI.[ProvinceID]
+INNER JOIN [CourseWorkDatabase].[dbo].Countries AS CO ON CO.[CountryID]=P.[CountryID]
+
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[CustomerDimension]
+	([CustomerID]
+	,[FullName]
+	,[Title]
+	,[DeliveryAddressID]
+	,[BillingAddressID]
+	,[PhoneNumber]
+	,[Email]
+	,[ModifiedDate])
+
+SELECT C.[CustomerID]
+       ,C.[FullName]
+       ,C.[Title]
+       ,C.[DeliveryAddressID]
+       ,C.[BillingAddressID]
+       ,C.[PhoneNumber]
+       ,C.[Email]
+       ,C.[ModifiedDate]
+FROM [CourseWorkDatabase].[dbo].[Customers] AS C
+INNER JOIN [CourseWorkDatabase].[dbo].[Addresses] AS A ON A.[AddressID]=C.[DeliveryAddressID] AND A.[AddressID]=C.[CityBillingAddressID]
+GO
+
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[PackageTypeDimension]
+	([PackageTypeID]
+	,[PackageTypeName]
+	,[ModifiedDate])
+
+SELECT *
+FROM [CourseWorkDatabase].[dbo].[PackageTypes]
+GO
+
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[PaymentTypeDimension]
+	([PaymentTypeID]
+	,[PaymentTypeName]
+	,[ModifiedDate])
+
+SELECT *
+FROM [CourseWorkDatabase].[dbo].[PaymentTypes]
+GO
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[ProductDimension]
+	([ProductID]
+	,[ProductName]
+	,[ProductCode]
+	,[ProductDescription]
+	,[UnitPrice]
+	,[Discontinued]
+	,[ModifiedDate])
+
+SELECT P.[ProductID]
+       ,P.[ProductName]
+       ,P.[ProductCode]
+       ,P.[ProductDescription]
+       ,P.[UnitPrice]
+       ,P.[Discontinued]
+       ,P.[ModifiedDate]
+FROM [CourseWorkDatabase].[dbo].[Products] as P
+GO
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[PromotionDimension]
+	([PromotionID]
+	,[DealDescription]
+	,[StartDate]
+	,[EndDate]
+	,[DiscountAmount]
+	,[DiscountPercentage]
+	,[ModifiedDate])
+
+SELECT PR.[PromotionID]
+       ,PR.[DealDescription]
+       ,PR.[StartDate]
+       ,PR.[EndDate]
+       ,PR.[DiscountAmount]
+       ,PR.[DiscountPercentage]
+       ,PR.[ModifiedDate]
+FROM [CourseWorkDatabase].[dbo].[Promotions] as PR
+GO
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[StoreDimension]
+VALUES (1,'Sweet Suprise',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE())),
+       (2,'Choco Corner',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE())),
+       (3,'Mr bake',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE())),
+       (4,'Daily grind',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE())),
+       (5,'Traffle',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE())),
+       (6,'Beans',(SELECT TOP 1 [AddressID] FROM [dbo].[AddressDimension] ORDER BY NEWID()), DATEADD(YEAR, -1, GETDATE()))
+GO
+
+USE [Lovey_Candies]
+GO
+
+INSERT INTO [dbo].[SalesFact]
+	([SalesID]
+	,[ProductID]
+	,[StoreID]
+	,[CustomerID]
+	,[EmployeeID]
+	,[DeliveryAddressID]
+	,[PackageTypeID]
+	,[PaymentTypeID]
+	,[PromotionID]
+	,[UnitPrice]
+	,[Quantity]
+	,[Discount]
+	,[OrderDate]
+	,[DeliveryDate])
+
+SELECT PR.[PromotionID]
+       ,PR.[DealDescription]
+       ,PR.[StartDate]
+       ,PR.[EndDate]
+       ,PR.[DiscountAmount]
+       ,PR.[DiscountPercentage]
+       ,PR.[ModifiedDate]
+FROM [CourseWorkDatabase].[dbo].[Promotions] as PR
+GO

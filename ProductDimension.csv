@@ -1,0 +1,172 @@
+ProductID,ProductName,ProductCode,ProductDescription,UnitPrice,Discontinued,ModifiedDate
+3,Bacon ice cream,PROD-0003,Bacon ice cream,17.00,False,2019-01-01 00:00:00
+4,Birthday Cake,PROD-0004,Birthday Cake,32.00,False,2019-01-01 00:00:00
+5,Black Raspberry,PROD-0005,Black Raspberry,18.00,False,2019-01-01 00:00:00
+6,Black Raspberry Crunch,PROD-0006,Black Raspberry Crunch,2.50,False,2019-01-01 00:00:00
+7,Blue Hawaiian ,PROD-0007,Blue Hawaiian ,19.00,False,2019-01-01 00:00:00
+8,Blue Moon,PROD-0008,Blue Moon,14.00,False,2019-01-01 00:00:00
+9,Blueberry ,PROD-0009,Blueberry ,10.00,False,2019-01-01 00:00:00
+10,Blueberry Almond ,PROD-0010,Blueberry Almond ,22.00,False,2019-01-01 00:00:00
+11,Blueberry Cheesecake,PROD-0011,Blueberry Cheesecake,25.00,False,2019-01-01 00:00:00
+12,Brown bread ice cream,PROD-0012,Brown bread ice cream,12.50,False,2019-01-01 00:00:00
+13,Butter Brickle,PROD-0013,Butter Brickle,36.00,False,2019-01-01 00:00:00
+14,Butter Pecan,PROD-0014,Butter Pecan,15.00,False,2019-01-01 00:00:00
+15,Butter Pecan,PROD-0015,Butter Pecan,30.00,False,2019-01-01 00:00:00
+16,Butterscotch ,PROD-0016,Butterscotch ,40.00,False,2019-01-01 00:00:00
+17,Cake Batter Supreme,PROD-0017,Cake Batter Supreme,31.00,False,2019-01-01 00:00:00
+18,Cantaloupe ,PROD-0018,Cantaloupe ,21.00,False,2019-01-01 00:00:00
+19,Caramel Praline,PROD-0019,Caramel Praline,18.00,False,2019-01-01 00:00:00
+20,Cherry Jubilee ,PROD-0020,Cherry Jubilee ,38.00,False,2019-05-28 00:00:00
+21,Cherry Vanilla ,PROD-0021,Cherry Vanilla ,6.00,False,2019-05-28 00:00:00
+22,Chilifest Chocolate (Seasonal) ,PROD-0022,Chilifest Chocolate (Seasonal) ,23.25,False,2019-05-28 00:00:00
+23,Chipitty Chocolate,PROD-0023,Chipitty Chocolate,15.50,False,2019-01-01 00:00:00
+24,Choco Cherry,PROD-0024,Choco Cherry,19.00,False,2019-01-01 00:00:00
+25,Chocolate ,PROD-0025,Chocolate ,17.45,False,2019-01-01 00:00:00
+26,Chocolate,PROD-0026,Chocolate,26.00,False,2019-01-01 00:00:00
+27,Chocolate Almond ,PROD-0027,Chocolate Almond ,62.50,False,2019-01-01 00:00:00
+28,Chocolate Brownies,PROD-0028,Chocolate Brownies,263.50,False,2019-01-01 00:00:00
+29,Chocolate Cheesecake,PROD-0029,Chocolate Cheesecake,9.20,False,2019-01-01 00:00:00
+30,Chocolate Chip,PROD-0030,Chocolate Chip,18.00,False,2019-01-01 00:00:00
+31,Chocolate chip cookie dough ice cream,PROD-0031,Chocolate chip cookie dough ice cream,21.50,False,2019-01-01 00:00:00
+32,Chocolate Chunk ,PROD-0032,Chocolate Chunk ,81.00,False,2019-01-01 00:00:00
+33,Chocolate Custard,PROD-0033,Chocolate Custard,18.40,False,2019-01-01 00:00:00
+34,Chocolate Marshmallow ,PROD-0034,Chocolate Marshmallow ,10.00,False,2019-01-01 00:00:00
+35,Chocolate Mint Cookie,PROD-0035,Chocolate Mint Cookie,21.00,False,2019-01-01 00:00:00
+36,Chocolate Peanut Butter Pretzel,PROD-0036,Chocolate Peanut Butter Pretzel,9.00,False,2019-01-01 00:00:00
+37,Chocolate Raspberry Cheescake,PROD-0037,Chocolate Raspberry Cheescake,14.00,False,2019-01-01 00:00:00
+38,Cinnamon,PROD-0038,Cinnamon,9.65,False,2019-01-01 00:00:00
+39,Cinnamon ,PROD-0039,Cinnamon ,43.90,False,2019-01-01 00:00:00
+40,Cinn-ful ,PROD-0040,Cinn-ful ,31.23,False,2019-01-01 00:00:00
+41,Coconut ,PROD-0041,Coconut ,25.89,False,2019-01-01 00:00:00
+42,Coconut Almond Fudge ,PROD-0042,Coconut Almond Fudge ,12.50,False,2019-01-01 00:00:00
+43,Coffee ,PROD-0043,Coffee ,32.00,False,2019-01-01 00:00:00
+44,Coffee,PROD-0044,Coffee,46.00,False,2019-01-01 00:00:00
+45,Coffee & Toffee ,PROD-0045,Coffee & Toffee ,14.00,False,2019-01-01 00:00:00
+46,Coffee Cup ,PROD-0046,Coffee Cup ,2.50,False,2019-05-28 00:00:00
+47,Coffee Molasses Chip,PROD-0047,Coffee Molasses Chip,19.45,False,2019-01-01 00:00:00
+48,Cookie Dough,PROD-0048,Cookie Dough,18.00,False,2019-01-01 00:00:00
+49,Cookies & Cream,PROD-0049,Cookies & Cream,19.00,False,2019-01-01 00:00:00
+50,Cookies & Dough,PROD-0050,Cookies & Dough,12.00,False,2019-01-01 00:00:00
+51,Cotton Candy,PROD-0051,Cotton Candy,9.50,False,2019-01-01 00:00:00
+52,Cotton Candy ,PROD-0052,Cotton Candy ,26.00,False,2019-01-01 00:00:00
+53,Creme Caramel ,PROD-0053,Creme Caramel ,263.50,False,2019-01-01 00:00:00
+54,Crunchy Grasshopper,PROD-0054,Crunchy Grasshopper,18.00,False,2019-01-01 00:00:00
+55,Dark Cherry Sorbet ,PROD-0055,Dark Cherry Sorbet ,18.40,False,2019-01-01 00:00:00
+56,Egg Nog,PROD-0056,Egg Nog,12.75,False,2019-01-01 00:00:00
+57,Egg Nog (seasonal),PROD-0057,Egg Nog (seasonal),9.65,False,2019-01-01 00:00:00
+58,Fluffer Nutter ,PROD-0058,Fluffer Nutter ,46.00,False,2019-01-01 00:00:00
+59,French Vanilla,PROD-0059,French Vanilla,20.00,False,2019-01-01 00:00:00
+60,Fudge Marble,PROD-0060,Fudge Marble,16.25,False,2019-01-01 00:00:00
+61,Garlic ice cream,PROD-0061,Garlic ice cream,34.80,False,2019-01-01 00:00:00
+62,German Chocolate ,PROD-0062,German Chocolate ,19.45,False,2019-01-01 00:00:00
+63,Gianduia ,PROD-0063,Gianduia ,9.50,False,2019-01-01 00:00:00
+64,Ginger Snap,PROD-0064,Ginger Snap,12.00,False,2019-01-01 00:00:00
+65,Good Life Ginger ,PROD-0065,Good Life Ginger ,9.50,False,2019-01-01 00:00:00
+66,Grape ,PROD-0066,Grape ,20.00,False,2019-01-01 00:00:00
+67,Grape ice cream,PROD-0067,Grape ice cream,15.00,False,2019-01-01 00:00:00
+68,Grape nut ice cream,PROD-0068,Grape nut ice cream,10.00,False,2019-01-01 00:00:00
+69,Green Tea ,PROD-0069,Green Tea ,12.75,False,2019-01-01 00:00:00
+70,Green tea ice cream,PROD-0070,Green tea ice cream,32.80,False,2019-01-01 00:00:00
+71,Hazelnut ,PROD-0071,Hazelnut ,16.25,False,2019-01-01 00:00:00
+72,Holiday Cherry Vanilla (seasonal) ,PROD-0072,Holiday Cherry Vanilla (seasonal) ,53.00,False,2019-01-01 00:00:00
+73,Industrial Chocolate,PROD-0073,Industrial Chocolate,53.00,False,2019-01-01 00:00:00
+74,Irish Cream ,PROD-0074,Irish Cream ,7.00,False,2019-01-01 00:00:00
+75,Itty Bitty PB Pieces ,PROD-0075,Itty Bitty PB Pieces ,7.45,False,2019-01-01 00:00:00
+76,Jalapeno Popper (seasonal) ,PROD-0076,Jalapeno Popper (seasonal) ,24.00,False,2019-01-01 00:00:00
+77,Jittery Snickers ,PROD-0077,Jittery Snickers ,38.00,False,2019-01-01 00:00:00
+78,Junior Mint,PROD-0078,Junior Mint,19.50,False,2019-01-01 00:00:00
+79,Kahlua Almond Fudge ,PROD-0079,Kahlua Almond Fudge ,13.25,False,2019-01-01 00:00:00
+80,Key Lime Pie,PROD-0080,Key Lime Pie,55.00,False,2019-01-01 00:00:00
+81,Kulfi,PROD-0081,Kulfi,7.00,False,2019-01-01 00:00:00
+82,Lavender ,PROD-0082,Lavender ,34.00,False,2019-01-01 00:00:00
+83,Lavender Honey,PROD-0083,Lavender Honey,7.45,False,2019-01-01 00:00:00
+84,Lemon Chiffon,PROD-0084,Lemon Chiffon,38.00,False,2019-01-01 00:00:00
+85,Lemon Cookie ,PROD-0085,Lemon Cookie ,24.00,False,2019-01-01 00:00:00
+86,Lemon Sorbet ,PROD-0086,Lemon Sorbet ,28.50,False,2019-01-01 00:00:00
+87,Licorice,PROD-0087,Licorice,49.30,False,2019-01-01 00:00:00
+88,Mango ,PROD-0088,Mango ,43.90,False,2019-01-01 00:00:00
+89,Maple Bacon ,PROD-0089,Maple Bacon ,33.25,False,2019-01-01 00:00:00
+90,Maple Chestnut ,PROD-0090,Maple Chestnut ,21.05,False,2019-01-01 00:00:00
+91,Maple Walnut ,PROD-0091,Maple Walnut ,17.00,False,2019-01-01 00:00:00
+92,Masala Chai,PROD-0092,Masala Chai,19.50,False,2019-01-01 00:00:00
+93,Mexican Chocolate,PROD-0093,Mexican Chocolate,13.25,False,2019-01-01 00:00:00
+94,Minipump,PROD-0094,Minipump,18.00,False,2019-01-01 00:00:00
+95,Mint chocolate chip,PROD-0095,Mint chocolate chip,18.00,False,2019-01-01 00:00:00
+96,Mint Chocolate Chip,PROD-0096,Mint Chocolate Chip,55.00,False,2019-01-01 00:00:00
+97,Mint Chocolate Chunk ,PROD-0097,Mint Chocolate Chunk ,14.00,False,2019-01-01 00:00:00
+98,Mint Cookies,PROD-0098,Mint Cookies,34.00,False,2019-01-01 00:00:00
+99,Mocha Almond Fudge ,PROD-0099,Mocha Almond Fudge ,12.50,False,2019-01-01 00:00:00
+100,Mocha Almond Fudge,PROD-0100,Mocha Almond Fudge,28.50,False,2019-01-01 00:00:00
+101,Mocha Chocolate Chunk ,PROD-0101,Mocha Chocolate Chunk ,36.00,False,2019-01-01 00:00:00
+102,Moople Nut,PROD-0102,Moople Nut,49.30,False,2019-01-01 00:00:00
+103,Mountain Pump,PROD-0103,Mountain Pump,13.00,False,2019-01-01 00:00:00
+104,Mud Pie,PROD-0104,Mud Pie,15.00,False,2019-01-01 00:00:00
+105,Mudslide ,PROD-0105,Mudslide ,21.50,False,2019-01-01 00:00:00
+106,Neapolitan ice cream,PROD-0106,Neapolitan ice cream,13.00,False,2019-01-01 00:00:00
+107,No Doze ,PROD-0107,No Doze ,34.80,False,2019-01-01 00:00:00
+108,No Tell Ahh! ,PROD-0108,No Tell Ahh! ,43.90,False,2019-01-01 00:00:00
+109,Nut Brown Ale,PROD-0109,Nut Brown Ale,15.00,False,2019-01-01 00:00:00
+110,Nutty Nut Brown Ale,PROD-0110,Nutty Nut Brown Ale,10.00,False,2019-01-01 00:00:00
+111,Orange Pineapple ,PROD-0111,Orange Pineapple ,7.75,False,2019-01-01 00:00:00
+112,Orange Sorbet ,PROD-0112,Orange Sorbet ,18.00,False,2019-01-01 00:00:00
+113,Passionate Peanut Butter Cup ,PROD-0113,Passionate Peanut Butter Cup ,13.00,False,2019-01-01 00:00:00
+114,Peach,PROD-0114,Peach,33.25,False,2019-01-01 00:00:00
+115,Peach Cobbler,PROD-0115,Peach Cobbler,21.35,False,2019-01-01 00:00:00
+116,Peachy Keen ,PROD-0116,Peachy Keen ,97.00,False,2019-01-01 00:00:00
+117,Peppermint Candy (seasonal) ,PROD-0117,Peppermint Candy (seasonal) ,39.00,False,2019-01-01 00:00:00
+118,Peppermint Chip,PROD-0118,Peppermint Chip,21.05,False,2019-01-01 00:00:00
+119,Pina Colada Sorbet,PROD-0119,Pina Colada Sorbet,4.50,False,2019-01-01 00:00:00
+120,Pistachio ,PROD-0120,Pistachio ,45.60,False,2019-01-01 00:00:00
+121,Pistachio Almond,PROD-0121,Pistachio Almond,17.00,False,2019-01-01 00:00:00
+122,Pralines & Cream,PROD-0122,Pralines & Cream,123.79,False,2019-01-01 00:00:00
+123,Pumpkin ,PROD-0123,Pumpkin ,14.00,False,2019-01-01 00:00:00
+124,Pumpkin Cheesecake,PROD-0124,Pumpkin Cheesecake,32.80,False,2019-01-01 00:00:00
+125,Purple Cow ,PROD-0125,Purple Cow ,18.00,False,2019-01-01 00:00:00
+126,Rainbow Sherbet,PROD-0126,Rainbow Sherbet,12.50,False,2019-01-01 00:00:00
+127,Raspberry Ripple,PROD-0127,Raspberry Ripple,33.25,False,2019-01-01 00:00:00
+128,Red Hot Mama ,PROD-0128,Red Hot Mama ,19.00,False,2019-01-01 00:00:00
+129,Red Raspberry ,PROD-0129,Red Raspberry ,10.00,False,2019-01-01 00:00:00
+130,Red, White & Blueberry (seasonal) ,PROD-0130,Red, White & Blueberry (seasonal) ,22.00,False,2019-01-01 00:00:00
+131,Rocky Road ,PROD-0131,Rocky Road ,25.00,False,2019-01-01 00:00:00
+132,Rocky Road,PROD-0132,Rocky Road,36.00,False,2019-01-01 00:00:00
+133,Rocky road ice cream,PROD-0133,Rocky road ice cream,21.05,False,2019-01-01 00:00:00
+134,Rose,PROD-0134,Rose,15.00,False,2019-01-01 00:00:00
+135,Rum Raisin ,PROD-0135,Rum Raisin ,30.00,False,2019-01-01 00:00:00
+136,Rum Raisin ,PROD-0136,Rum Raisin ,21.50,False,2019-01-01 00:00:00
+137,Saffron Pistachio,PROD-0137,Saffron Pistachio,34.80,False,2019-01-01 00:00:00
+138,Salty Caramel,PROD-0138,Salty Caramel,15.00,False,2019-01-01 00:00:00
+139,Sea Salt Caramel ,PROD-0139,Sea Salt Caramel ,31.00,False,2019-01-01 00:00:00
+140,Smores,PROD-0140,Smores,40.00,False,2019-01-01 00:00:00
+141,Snickers ,PROD-0141,Snickers ,21.00,False,2019-01-01 00:00:00
+142,Spiced Apple ,PROD-0142,Spiced Apple ,38.00,False,2019-01-01 00:00:00
+143,Spumoni,PROD-0143,Spumoni,21.35,False,2019-01-01 00:00:00
+144,Stracciatella,PROD-0144,Stracciatella,97.00,True,2019-01-01 00:00:00
+145,Strawberrry ,PROD-0145,Strawberrry ,6.00,False,2019-01-01 00:00:00
+146,Strawberry,PROD-0146,Strawberry,21.35,False,2019-01-01 00:00:00
+147,Strawberry Cheesecake,PROD-0147,Strawberry Cheesecake,23.25,False,2019-01-01 00:00:00
+148,Strawberry ice cream,PROD-0148,Strawberry ice cream,39.00,True,2019-01-01 00:00:00
+149,Strawberry Shortbread,PROD-0149,Strawberry Shortbread,15.50,False,2019-01-01 00:00:00
+150,Superman ice cream,PROD-0150,Superman ice cream,4.50,True,2019-01-01 00:00:00
+151,Sweet Coconut,PROD-0151,Sweet Coconut,97.00,False,2019-01-01 00:00:00
+152,Swiss Mocha,PROD-0152,Swiss Mocha,39.00,False,2019-01-01 00:00:00
+153,Taro ice cream,PROD-0153,Taro ice cream,45.60,True,2019-01-01 00:00:00
+154,Tiger Strips ,PROD-0154,Tiger Strips ,62.50,False,2019-01-01 00:00:00
+155,Tiger tail ice cream,PROD-0155,Tiger tail ice cream,123.79,True,2019-01-01 00:00:00
+156,Tiramisu,PROD-0156,Tiramisu,9.20,False,2019-01-01 00:00:00
+157,Toasted Almond,PROD-0157,Toasted Almond,4.50,False,2019-01-01 00:00:00
+158,Toffeeness,PROD-0158,Toffeeness,45.60,False,2019-01-01 00:00:00
+159,Touring-Panniers, Large,PROD-0159,Touring-Panniers, Large,10.00,False,2019-01-01 00:00:00
+160,Tutti frutti,PROD-0160,Tutti frutti,14.00,True,2019-01-01 00:00:00
+161,Ultimate Fudge Brownie,PROD-0161,Ultimate Fudge Brownie,81.00,False,2019-01-01 00:00:00
+162,Vanilla Bean ,PROD-0162,Vanilla Bean ,10.00,False,2019-01-01 00:00:00
+163,Vanilla Bean,PROD-0163,Vanilla Bean,123.79,False,2019-01-01 00:00:00
+164,Vanilla Fudge ,PROD-0164,Vanilla Fudge ,21.00,False,2019-01-01 00:00:00
+165,Vanilla ice cream,PROD-0165,Vanilla ice cream,32.80,True,2019-01-01 00:00:00
+166,Vanilla Malt w/ Whoppers ,PROD-0166,Vanilla Malt w/ Whoppers ,9.00,False,2019-01-01 00:00:00
+167,Water Bottle - 30 oz.,PROD-0167,Water Bottle - 30 oz.,7.75,False,2019-01-01 00:00:00
+168,Watermelon Sorbet ,PROD-0168,Watermelon Sorbet ,14.00,False,2019-01-01 00:00:00
+169,WCRT ,PROD-0169,WCRT ,31.23,False,2019-01-01 00:00:00
+170,White Chocolate Ginger,PROD-0170,White Chocolate Ginger,14.00,False,2019-01-01 00:00:00
+171,White Gold,PROD-0171,White Gold,43.90,False,2019-01-01 00:00:00
+172,White Out ,PROD-0172,White Out ,25.89,False,2019-01-01 00:00:00
+173,White Russian (seasonal),PROD-0173,White Russian (seasonal),12.50,False,2019-01-01 00:00:00
